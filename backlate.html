@@ -1,100 +1,60 @@
 
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>BACK&LATE EXCERSISE </title>
- <h1>WORKOUT VIDEO OF Backlate </h1>
- 
+<title>BACK&LATE EXERCISE</title>
 <style>
-  <h1>WORKOUT VIDEO OF BACKLATE </h1>
   body {
-
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     font-family: sans-serif;
-    height: 100vh;
-    background: #f0f0f0;
+    min-height: 100vh;
+    background-image: url('444.jpg'); /* مسیر درست به عکس */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  h1 {
+    color: black;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
   }
   .member {
     text-align: center;
+    margin-bottom: 20px;
   }
   video {
-    width: 600px;
-    height: 150px;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
     border: 2px solid #333;
     border-radius: 10px;
     background: #000;
     margin-bottom: 10px;
   }
-  <style type="text/css">
-    h1{
-      color: white;
-      font-size: 40px;
-    }
-    
-
-
-    body{
-      background-image:url(Images/4444.jpg);
-      background-size:cover;
-      background background-attachment:fixed;
-    }
-    .up{
-      colar: #A22B;
-    }
-
-  </style>
-
 </style>
-
 </head>
 <body>
-<div class="member">
-  <video id="member1" autoplay muted></video>
-  <div>۱PLAY</div>
-</div>
-<div class="member">
-  <video id="member2" autoplay muted></video>
-  <div>۲PLAY</div>
-</div>
-<div class="member">
-  <video id="member3" autoplay muted></video>
-   <div>۲PLAY</div>
-</div>
-<div class="member">
-  <video id="member4" autoplay muted></video>
-   <div>۲PLAY</div>
-</div>
-<script>
-const members = {
-  member1: ["Videos/Back.mp4"],
-  member2: ["Videos/Back1.mp4"],
-  member3: ["Videos/Back2.mp4"],
-  member4: ["Videos/Back1.mp4"]
-};
-for (const id in members) {
-  const videoEl = document.getElementById(id);
-  let index = 0;
-  function playNext() {
-    videoEl.src = members[id][index];
-    videoEl.play();
- //AFTER 5ECOND ATUOMATIC REPLAY    
-    setTimeout(playNext, 5000);
-  }
-  playNext();
-}
-</script>
-  <ul class="mu">
-   <a href="page2.html">
-  <h2> go back</h2>
-    <style>
-h2{color: white}
-</style>
+
+<h1>WORKOUT VIDEO OF BACK&LATE</h1>
   
-  </a>
-</ul>
+   <video  controls width="100%">
+  <source src="Back.mp4" type="video/mp4"></video>
+
+  <video  controls width="100%">
+  <source src="Back1.mp4" type="video/mp4"></video>
+
+
+    <video  controls width="100%">
+  <source src="Back2.mp4" type="video/mp4"></video>
+
+     <video  controls width="100%">
+  <source src="Back1.mp4" type="video/mp4"></video>
 </body>
-</html>
+</body>
+</body>
