@@ -17,6 +17,12 @@
     background: #000;
     margin-bottom: 10px;
   }
+body {
+    background-image: url('workout.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
     body {
 
     display: flex;
