@@ -1,81 +1,131 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WORKOUT</title>
-<style>
-    body {
-        background-image: url('workout1.jpg');
-        background-size: cover;
-        font-family: Lato, sans-serif;
-        color: white;
-        margin: 0;
-        padding: 20px;
-    }
-    h1 {
-        font-size: 40px;
-    }
-    fieldset {
-        background-color: rgba(0,0,0,0.5);
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 400px;
-        margin-top: 20px;
-    }
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 8px;
-        margin: 5px 0 10px 0;
-        border-radius: 5px;
-        border: none;
-    }
-    input[type=submit], input[type=reset] {
-        padding: 10px 20px;
-        margin: 5px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-    }
-    .visit-btn {
-        padding: 12px 24px;
-        background-color: #2ea44f;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-    .visit-btn:hover {
-        background-color: #2c974b;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKOUT</title>
+
+    <!-- 🔔 OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "122002e8-7f7a-4e86-93fc-06ece6e2e972",
+        });
+      });
+    </script>
+
+    <style>
+        body {
+            background-image: url('workout.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .visit-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            padding: 12px;
+            text-align: center;
+            background: #ff9800;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .visit-btn:hover {
+            background: #e68900;
+        }
+
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        input[type=submit] {
+            background: #2ea44f;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=reset] {
+            background: #555;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Logout Form</h1>
+    <h1>Gym Logout💪</h1>
 
-<a href="https://http-university.github.io/AZ-WORKOUT-/" target="_blank" class="visit-btn">Visit site</a>
+    <!-- Visit -->
+    
 
+    <!-- Form -->
+    <fieldset class="card">
+        <legend>Member Registration</legend>
 
+        
+            <form action="page2.html">
+            <label>First Name</label>
+            <input type="text">
 
+       
 
+            <label>Password</label>
+            <input type="password">
 
+            <div class="buttons">
+                <input type="reset" value="RESET">
+                <input type="submit" value="REGISTER">
+            </div>
+                
+        </form>
+    </fieldset>
+
+<a href="https://http-university.github.io/AZ-GYM-/" target="_blank" class="visit-btn">
+        Visit Workout Site
+    </a>
 
 
     
-<fieldset>
-<legend>Personal Information</legend>
-<form action="index.html">
-    First Name: <input type="text" id="txtfirstname" name="txtfirstname"/><br/>
-    Password: <input type="password" id="pwdpass" name="pwdpass"/><br/>
-    <input type="reset" value="RESET"/>
-    <input type="submit" value="SUBMIT"/>
-</form>
-</fieldset>
+    
 
 </body>
 </html>
