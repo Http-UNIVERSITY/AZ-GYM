@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Report</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1c1c1c;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #2ea44f;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    background: #333;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #2ea44f;
+}
+
+/* Main */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #2ea44f;
+}
+
+/* Buttons */
+.btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    background: red;
+    color: white;
+}
+
+.edit {
+    background: orange;
+    color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>💪 Admin Panel</h2>
+    <a href="index.html">🏠 Home</a>
+    <a href="report.html">📊 Report</a>
+    <a href="#">👤 Users</a>
+    <a href="#">💳 Payments</a>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+<h1>📊 Accounts Report</h1>
+
+<div class="card">
+    <h3>Total Users: 3</h3>
+</div>
+
+<div class="card">
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Goal</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>Ahmad</td>
+        <td>22</td>
+        <td>70kg</td>
+        <td>Muscle Gain</td>
+        <td>
+            <button class="btn edit">Edit</button>
+            <button class="btn delete">Delete</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Sara</td>
+        <td>19</td>
+        <td>55kg</td>
+        <td>Fitness</td>
+        <td>
+            <button class="btn edit">Edit</button>
+            <button class="btn delete">Delete</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Ali</td>
+        <td>25</td>
+        <td>80kg</td>
+        <td>Weight Loss</td>
+        <td>
+            <button class="btn edit">Edit</button>
+            <button class="btn delete">Delete</button>
+        </td>
+    </tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>
