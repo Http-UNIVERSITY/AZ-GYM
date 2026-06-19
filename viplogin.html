@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP LOGIN</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#222;
+    padding:20px;
+    border-radius:15px;
+    width:300px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:orange;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>🔒 VIP LOGIN</h2>
+
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">Enter VIP</button>
+</div>
+
+<script>
+function login(){
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
+
+    // 🔥 ساده برای تست
+    if(u=="vip" && p=="1234"){
+        localStorage.setItem("vip","true");
+        window.location.href="vip.html";
+    } else {
+        alert("Wrong login!");
+    }
+}
+</script>
+
+</body>
+</html>
