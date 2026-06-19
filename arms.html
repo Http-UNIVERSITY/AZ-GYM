@@ -2,57 +2,86 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>ARMS EXERCISE</title>
+<title>ARM EXERCISE</title>
+
 <style>
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 20px;
     font-family: sans-serif;
     min-height: 100vh;
-    background-image: url('workout.jpg'); /* مسیر درست به عکس */
+    background-image: url('workout.jpg');
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
   }
+
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
   h1 {
-    color: black;
-    font-size: 40px;
-    margin-bottom: 30px;
+    color: white;
+    font-size: 38px;
+    margin-bottom: 25px;
     text-align: center;
+    z-index: 1;
   }
-  .member {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+
   video {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background: #000;
-    margin-bottom: 10px;
+    width: 95%;        /* 🔥 از عرض بیشتر شد */
+    max-width: 750px;  /* 🔥 بزرگ‌تر شد */
+    border-radius: 15px;
+    margin-bottom: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    z-index: 1;
+    position: relative;
+    filter: brightness(0.95);
   }
+
 </style>
 </head>
+
 <body>
 
 <h1>WORKOUT VIDEO OF ARMS</h1>
-  
-   <video  controls width="100%">
-  <source src="Arms.mp4" type="video/mp4"></video>
 
-  <video  controls width="100%">
-  <source src="Arms1.mp4" type="video/mp4"></video>
+<video autoplay muted playsinline>
+  <source src="Arms.mp4">
+</video>
 
+<video autoplay muted playsinline>
+  <source src="Arms1.mp4">
+</video>
 
-    <video  controls width="100%">
-  <source src="Arms2.mp4" type="video/mp4"></video>
+<video autoplay muted playsinline>
+  <source src="Arms2.mp4">
+</video>
 
-     <video  controls width="100%">
-  <source src="Arms3.mp4" type="video/mp4"></video>
+<video autoplay muted playsinline>
+  <source src="Arms3.mp4">
+</video>
+
+<script>
+  let videos = document.querySelectorAll("video");
+
+  videos.forEach(video => {
+    video.addEventListener("loadedmetadata", () => {
+      video.currentTime = 0;
+      video.play();
+
+      setTimeout(() => {
+        video.pause();
+      }, 10000); // 🔥 10 ثانیه
+    });
+  });
+</script>
+
 </body>
-</body>
-</body>
+</html>
