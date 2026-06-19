@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>BACK LATS EXCERSIZE</title>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-image: url('workout.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
+  h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  video {
+    width: 95%;        /* 🔥 از عرض بیشتر شد */
+    max-width: 750px;  /* 🔥 بزرگ‌تر شد */
+    border-radius: 15px;
+    margin-bottom: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    z-index: 1;
+    position: relative;
+    filter: brightness(0.95);
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1>WORKOUT VIDEO OF BACK LATS</h1>
+
+<video autoplay muted playsinline>
+  <source src="Back.mp4">
+</video>
+
+<video autoplay muted playsinline>
+  <source src="Back1.mp4">
+</video>
+
+<video autoplay muted playsinline>
+  <source src="Back2.mp4">
+</video>
+
+<video autoplay muted playsinline>
+  <source src="Back1.mp4">
+</video>
+
+<script>
+  let videos = document.querySelectorAll("video");
+
+  videos.forEach(video => {
+    video.addEventListener("loadedmetadata", () => {
+      video.currentTime = 0;
+      video.play();
+
+      setTimeout(() => {
+        video.pause();
+      }, 10000); // 🔥 10 ثانیه
+    });
+  });
+</script>
+
+</body>
+</html>
