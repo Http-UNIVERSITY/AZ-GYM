@@ -16,26 +16,39 @@ body{
     height:100vh;
 }
 
+/* 🔥 box bigger */
 .box{
     background:#222;
-    padding:20px;
+    padding:30px;
     border-radius:15px;
-    width:300px;
+    width:350px;
+    text-align:center;
 }
 
+/* 🔥 bigger inputs */
 input{
     width:100%;
-    padding:10px;
-    margin:10px 0;
+    padding:14px;
+    margin:12px 0;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
 }
 
+/* 🔥 button */
 button{
     width:100%;
-    padding:10px;
+    padding:14px;
     background:orange;
     border:none;
     font-weight:bold;
     cursor:pointer;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button:hover{
+    background:#ffb347;
 }
 </style>
 </head>
@@ -56,11 +69,14 @@ function login(){
     let u = document.getElementById("user").value;
     let p = document.getElementById("pass").value;
 
-    // 🔥 ساده برای تست
+    // 🔥 login check
     if(u=="vip" && p=="1234"){
         localStorage.setItem("vip","true");
+
+        // 🔥 مستقیم برود به صفحه 30 روزه
         window.location.href="vippage.html";
-    } else {
+    } 
+    else {
         alert("Wrong login!");
     }
 }
