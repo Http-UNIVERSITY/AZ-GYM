@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP GYM PLAN</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: url("workout.jpg");
+    background-size: cover;
+    color:white;
+}
+
+/* dark overlay */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    z-index:0;
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    padding:20px;
+}
+
+/* header */
+h1{
+    text-align:center;
+    font-size:32px;
+}
+
+/* cards */
+.card{
+    background: rgba(255,255,255,0.08);
+    padding:15px;
+    margin:15px 0;
+    border-radius:15px;
+    backdrop-filter: blur(6px);
+}
+
+/* buttons */
+.btn{
+    display:block;
+    text-align:center;
+    padding:12px;
+    margin-top:10px;
+    background: orange;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background: gold;
+}
+
+video{
+    width:100%;
+    border-radius:12px;
+    margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔥 VIP 30 DAYS GYM PROGRAM</h1>
+
+<!-- PROGRAM -->
+<div class="card">
+<h2>💪 30 Days Plan</h2>
+<p>Complete muscle gain workout program for beginners and advanced users.</p>
+<a class="btn" href="#">Download Plan</a>
+</div>
+
+<!-- VIDEOS -->
+<div class="card">
+<h2>🎥 Workout Videos</h2>
+
+<video autoplay muted controls>
+  <source src="Chest.mp4">
+</video>
+
+<video autoplay muted controls>
+  <source src="Back.mp4">
+</video>
+<video autoplay muted controls>
+  <source src="Arms.mp4">
+</video>
+
+<video autoplay muted controls>
+  <source src="Shoulder.mp4">
+</video>
+
+
+
+</div>
+
+<!-- DIET -->
+<div class="card">
+<h2>🥗 Diet Plan</h2>
+<p>
+- High protein food<br>
+- Eggs, chicken, rice<br>
+- Drink 3L water daily<br>
+- Avoid junk food
+</p>
+</div>
+
+<!-- TIPS -->
+<div class="card">
+<h2>⚡ Important Tips</h2>
+<p>
+✔ Train 5 days per week<br>
+✔ Sleep 7–8 hours<br>
+✔ Stay consistent<br>
+✔ Increase weights weekly
+</p>
+</div>
+
+</div>
+
+</body>
+</html>
