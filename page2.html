@@ -6,18 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style type="text/css">
+    <style>
 
         body{
+            margin: 0;
+            font-family: Arial;
             background-image: url("4444.jpg");
             background-size: cover;
-            margin: 0;
-            font-family: lato;
         }
 
-        h1{
-            color: white;
-            font-size: 40px;
+        nav{
+            padding: 20px;
         }
 
         nav ul{
@@ -26,17 +25,34 @@
         }
 
         nav ul li{
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
+        /* 🔥 BTN style */
         nav ul li a{
-            color: white;   /* فقط همین باعث سفید شدن آیکن‌ها می‌شود */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 12px 15px;
+            border-radius: 12px;
+
+            color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
+
+            background: rgba(0,0,0,0.35);
+            backdrop-filter: blur(4px);
+            transition: 0.3s;
         }
 
         nav ul li a:hover{
-            color: #cccccc;
+            background: rgba(255,255,255,0.15);
+            transform: scale(1.03);
+        }
+
+        .icon{
+            font-size: 20px;
         }
 
     </style>
@@ -46,16 +62,16 @@
 
 <nav>
 <ul>
-    <li><a href="about.html">Home</a></li>
-    <li><a href="page3.html">RAJISTRATION</a></li>
-    <li><a href="page4.html">UPDATE</a></li>
-    <li><a href="page5.html">DELET&SEARCH</a></li>
-    <li><a href="report.html">REPORT</a></li>
-    <li><a href="chest.html">CHEST</a></li>
-    <li><a href="backlate.html">BACK&LATE</a></li>
-    <li><a href="arms.html">ARMS</a></li>
-    <li><a href="shoulder.html">SHOULDER</a></li>
-    <li><a href="vip.html">VIP GYM</a></li>
+    <li><a href="about.html"><span class="icon">🏠</span> Home</a></li>
+    <li><a href="page3.html"><span class="icon">📝</span> Registration</a></li>
+    <li><a href="page4.html"><span class="icon">🔄</span> Update</a></li>
+    <li><a href="page5.html"><span class="icon">🗑️</span> Delete & Search</a></li>
+    <li><a href="report.html"><span class="icon">📊</span> Report</a></li>
+    <li><a href="chest.html"><span class="icon">💪</span> Chest</a></li>
+    <li><a href="backlate.html"><span class="icon">🏋️</span> Back & Legs</a></li>
+    <li><a href="arms.html"><span class="icon">💪</span> Arms</a></li>
+    <li><a href="shoulder.html"><span class="icon">🏋️</span> Shoulder</a></li>
+    <li><a href="vip.html"><span class="icon">⭐</span> VIP GYM</a></li>
 </ul>
 </nav>
 
