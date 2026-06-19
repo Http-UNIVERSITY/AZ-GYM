@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>CHEST EXERCISE</title>
+
 <style>
   body {
     display: flex;
@@ -12,48 +13,68 @@
     padding: 20px;
     font-family: sans-serif;
     min-height: 100vh;
-    background-image: url('workout.jpg'); /* مسیر درست به عکس */
+    background-image: url('workout.jpg');
     background-size: cover;
     background-attachment: fixed;
   }
+
   h1 {
     color: black;
     font-size: 40px;
     margin-bottom: 30px;
     text-align: center;
   }
-  .member {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+
   video {
     width: 90%;
     max-width: 600px;
-    height: auto;
     border: 2px solid #333;
     border-radius: 10px;
     background: #000;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 </style>
 </head>
+
 <body>
 
 <h1>WORKOUT VIDEO OF CHEST</h1>
-  
-   <video  controls width="100%">
-  <source src="Chest.mp4" type="video/mp4"></video>
 
-  <video  controls width="100%">
-  <source src="Chest1.mp4" type="video/mp4"></video>
+<!-- VIDEO 1 -->
+<video autoplay muted playsinline>
+  <source src="Chest.mp4" type="video/mp4">
+</video>
 
+<!-- VIDEO 2 -->
+<video autoplay muted playsinline>
+  <source src="Chest1.mp4" type="video/mp4">
+</video>
 
-    <video  controls width="100%">
-  <source src="Chest2.mp4" type="video/mp4"></video>
+<!-- VIDEO 3 -->
+<video autoplay muted playsinline>
+  <source src="Chest2.mp4" type="video/mp4">
+</video>
 
-     <video  controls width="100%">
-  <source src="Chest3.mp4" type="video/mp4"></video>
+<!-- VIDEO 4 -->
+<video autoplay muted playsinline>
+  <source src="Chest3.mp4" type="video/mp4">
+</video>
+
+<script>
+  // 🔥 هر ویدیو فقط 5 ثانیه اجرا شود
+  let videos = document.querySelectorAll("video");
+
+  videos.forEach(video => {
+    video.addEventListener("loadedmetadata", () => {
+      video.currentTime = 0;
+      video.play();
+
+      setTimeout(() => {
+        video.pause();
+      }, 5000); // 5000ms = 5 ثانیه
+    });
+  });
+</script>
+
 </body>
-</body>
-</body>
-
+</html>
