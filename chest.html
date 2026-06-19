@@ -8,7 +8,6 @@
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 20px;
     font-family: sans-serif;
@@ -16,23 +15,43 @@
     background-image: url('workout.jpg');
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+  }
+
+  /* 🔥 dark overlay */
+  body::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
   }
 
   h1 {
-    color: black;
-    font-size: 40px;
-    margin-bottom: 30px;
+    color: white;
+    font-size: 38px;
+    margin-bottom: 25px;
     text-align: center;
+    z-index: 1;
   }
 
+  /* 🔥 video card style */
   video {
-    width: 90%;
-    max-width: 600px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background: #000;
-    margin-bottom: 15px;
+    width: 85%;
+    max-width: 500px;
+    border-radius: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: black;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    z-index: 1;
+    position: relative;
+    filter: brightness(0.95) contrast(1.05);
   }
+
 </style>
 </head>
 
@@ -40,28 +59,23 @@
 
 <h1>WORKOUT VIDEO OF CHEST</h1>
 
-<!-- VIDEO 1 -->
 <video autoplay muted playsinline>
   <source src="Chest.mp4" type="video/mp4">
 </video>
 
-<!-- VIDEO 2 -->
 <video autoplay muted playsinline>
   <source src="Chest1.mp4" type="video/mp4">
 </video>
 
-<!-- VIDEO 3 -->
 <video autoplay muted playsinline>
   <source src="Chest2.mp4" type="video/mp4">
 </video>
 
-<!-- VIDEO 4 -->
 <video autoplay muted playsinline>
   <source src="Chest3.mp4" type="video/mp4">
 </video>
 
 <script>
-  // 🔥 هر ویدیو فقط 5 ثانیه اجرا شود
   let videos = document.querySelectorAll("video");
 
   videos.forEach(video => {
@@ -71,7 +85,7 @@
 
       setTimeout(() => {
         video.pause();
-      }, 5000); // 5000ms = 5 ثانیه
+      }, 5000);
     });
   });
 </script>
