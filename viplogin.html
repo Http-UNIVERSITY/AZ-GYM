@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIP LOGIN</title>
 
 <style>
@@ -16,35 +17,42 @@ body{
     height:100vh;
 }
 
-/* 🔥 box bigger */
+/* 🔥 BIG BOX (responsive) */
 .box{
     background:#222;
-    padding:30px;
-    border-radius:15px;
-    width:350px;
+    padding:40px;
+    border-radius:20px;
+    width:90%;
+    max-width:500px;   /* 🔥 بزرگ‌تر شد */
     text-align:center;
 }
 
-/* 🔥 bigger inputs */
-input{
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    border-radius:8px;
-    border:none;
-    font-size:16px;
+/* 🔥 BIG TITLE */
+h2{
+    font-size:32px;
+    margin-bottom:20px;
 }
 
-/* 🔥 button */
+/* 🔥 BIG INPUTS */
+input{
+    width:100%;
+    padding:18px;      /* 🔥 بزرگ */
+    margin:15px 0;
+    border-radius:10px;
+    border:none;
+    font-size:18px;    /* 🔥 متن بزرگ */
+}
+
+/* 🔥 BIG BUTTON */
 button{
     width:100%;
-    padding:14px;
+    padding:18px;
     background:orange;
     border:none;
     font-weight:bold;
     cursor:pointer;
-    border-radius:8px;
-    font-size:16px;
+    border-radius:10px;
+    font-size:18px;
 }
 
 button:hover{
@@ -69,11 +77,8 @@ function login(){
     let u = document.getElementById("user").value;
     let p = document.getElementById("pass").value;
 
-    // 🔥 login check
     if(u=="vip" && p=="1234"){
         localStorage.setItem("vip","true");
-
-        // 🔥 مستقیم برود به صفحه 30 روزه
         window.location.href="vippage.html";
     } 
     else {
