@@ -1,57 +1,143 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
-	<title>
-		DELETE&SEARCH FORM
-</title>
-	<font face="lato" size="7"><font color="white"></font>
-	<meta charset="utf-8">
-	<meta name="viewport"content="width=device-width,
-	initial-scale-1>
-	<title>sample file </title>
-	<link rel="stylesheet" herf="Css/style.css">
-	<style type="text/css">
-		h1{
-			color: white;
-			font-size: 40px;
-		}
-		
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE&SEARCH</title>
+
+    <!-- 
+�
+�
+ OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "122002e8-7f7a-4e86-93fc-06ece6e2e972",
+        });
+      });
+    </script>
+    <script>
+function saveData() {
+    let name = document.getElementById("name").value;
+       let lastname = document.getElementById("lastname").value;
+    let age = document.getElementById("age").value;
+       let password = document.getElementById("password").value;
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push({
+        name: name,
+        age: age
+    });
+    localStorage.setItem("users", JSON.stringify(users));
+}
+</script>
 
 
-		body{
-			background-image:url(4444.jpg);
-			background-size:cover;
-			background background-attachment:fixed;
-		}
-		.up{
-			colar: #A22B;
-		}
-	</style>
-	<h1>DELETE&SEARCH FORM 
-	<fieldset>
-		<legend>personal information</legend>
-		 <form action="page2.html">
-		 	id<input type="text" id="txtid" name="txtid"/><br/>
-    	 first name <input type="text" id="txtfirstname" name="txtfirstname"/><br/>
-   father name<input type="text" id="txtfathername" name="txtfathername"/><br/>
-   last name <input type="text" id="txtlastname" name="txtlastname"/><br/>
-    password<input type="password" id="pwdpass"/><br/>
- 
-    <input type="radio" name="rdbgender" value="m"/>male
-    <input type="radio" name="rdbgender" value="f"/>female<br/>
-     	<input type="date"/ ><br/>
-     
-    	
+    <style>
+        body {
+            background-image: url('4444.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .visit-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            padding: 12px;
+            text-align: center;
+            background: #ff9800;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .visit-btn:hover {
+            background: #e68900;
+        }
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        input[type=submit] {
+            background: #2ea44f;
+            color: white;
+            cursor: pointer;
+        }
+        input[type=reset] {
+            background: #555;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gym DELETE&SEARCH 
+�
+�
+</h1>
+<button id="installBtn" class="install-btn" style="display:none;">
+Install App
+📱
+</button>
+    <!-- Visit -->
+    
 
-    	 <input type="serach" value="SERACH"/>
-   <input type="submit" value="DELETE"/><br/>
-		 </h1>
-    </form>
-   <a href="page2.html">
-	<h2> go back</h2>	
-	</a>
+    <!-- Form -->
+    <fieldset class="card">
+        <legend>Member DELETE&SEARCH</legend>
+        <form>
+            <label>First Name</label>
+            <input type="text">
+            <label>Last Name</label>
+            <input type="text">
+            <label>Age</label>
+            <input type="number">
+            <label>Weight (kg)</label>
+            <input type="number">
+            <label>Goal</label>
+            <select>
+                <option>Weight Loss</option>
+                <option>Muscle Gain</option>
+                <option>Fitness</option>
+            </select>
+            <label>Password</label>
+            <input type="password">
+            <div class="buttons">
+                <input type="reset" value="DELETE">
+                <input type="submit" value="SEARCH">
+            </div>
 
 
- 
+        </form>
     </fieldset>
-	</head>
+
+</body>
+</html>
