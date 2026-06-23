@@ -2,65 +2,76 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VIP SELECT</title>
+<title>VIP TRAINING</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial;
     background:linear-gradient(135deg,#000,#111,#0f0f2a);
-    color:white;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
+    color:white;
 }
 
-/* Container */
+/* container */
 .box{
     text-align:center;
     width:90%;
 }
 
-/* Title */
+/* title */
 h1{
     color:#00d4ff;
-    margin-bottom:30px;
+    margin-bottom:35px;
+    letter-spacing:2px;
 }
 
-/* Cards */
+/* cards */
 .card{
     background:rgba(255,255,255,0.06);
-    padding:25px;
-    margin:15px 0;
-    border-radius:20px;
+    padding:35px;
+    margin:20px auto;
+    width:320px;
+    border-radius:25px;
     cursor:pointer;
     transition:0.3s;
     box-shadow:0 0 15px rgba(0,0,0,0.5);
 }
 
+/* hover */
 .card:hover{
-    transform:scale(1.05);
-    background:rgba(0,212,255,0.15);
+    transform:scale(1.07);
+    background:rgba(0,212,255,0.12);
+    box-shadow:0 0 25px rgba(0,212,255,0.2);
 }
 
-/* Icons */
+/* icons */
 .icon{
-    font-size:40px;
+    font-size:45px;
     margin-bottom:10px;
 }
 
-/* Text */
+/* text */
 .title{
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
 }
 
 .sub{
     font-size:13px;
     opacity:0.8;
+    margin-top:5px;
 }
 
+/* links remove style */
+a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
 </style>
 </head>
 
@@ -68,23 +79,25 @@ h1{
 
 <div class="box">
 
-<h1>💎 VIP SELECT MODE</h1>
+    <h1>💎 SELECT YOUR PROGRAM</h1>
 
-<!-- 💪 Fitness -->
-<div class="card" onclick="alert('Fitness Selected')">
-    <div class="icon">🏃‍♂️</div>
-    <div class="title">Fitness</div>
-    <div class="sub">Fat loss • Cardio • Health</div>
-    <a href="vippage.html" class="btn fitness">FITNESS</a>
-</div>
+    <!-- Fitness -->
+    <a href="select.html">
+        <div class="card">
+            <div class="icon">🏃‍♂️</div>
+            <div class="title">FITNESS</div>
+            <div class="sub">Fat loss • Cardio • Health</div>
+        </div>
+    </a>
 
-<!-- 🏋️ Bodybuilding -->
-<div class="card" onclick="alert('Bodybuilding Selected')">
-    <div class="icon">🏋️‍♂️</div>
-    <div class="title">Bodybuilding</div>
-    <div class="sub">Muscle gain • Strength • Mass</div>
-    <a href="#" class="btn budybuilding">BUDYBUILDING</a>
-</div>
+    <!-- Bodybuilding -->
+    <a href="bodybuilding.html">
+        <div class="card">
+            <div class="icon">🏋️‍♂️</div>
+            <div class="title">BODYBUILDING</div>
+            <div class="sub">Muscle gain • Strength • Mass</div>
+        </div>
+    </a>
 
 </div>
 
