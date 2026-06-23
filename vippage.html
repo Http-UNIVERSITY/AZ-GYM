@@ -1,87 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VIP GYM PLAN</title>
+<title>VIP Diet</title>
 
 <style>
-
 body{
     margin:0;
-    font-family: Arial;
-    background: url("workout.jpg");
-    background-size: cover;
+    font-family:Arial;
+    background:#0b0b0f;
     color:white;
 }
 
-/* dark overlay */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background: rgba(0,0,0,0.6);
-    z-index:0;
-}
-
 .container{
-    position:relative;
-    z-index:1;
-    padding:20px;
-}
-
-/* header */
-h1{
-    text-align:center;
-    font-size:32px;
-}
-
-/* cards */
-.card{
-    background: rgba(255,255,255,0.08);
     padding:15px;
-    margin:15px 0;
-    border-radius:15px;
-    backdrop-filter: blur(6px);
 }
 
-/* buttons */
-.btn{
-    display:block;
+h2{
     text-align:center;
-    padding:12px;
-    margin-top:10px;
-    background: orange;
-    color:black;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
+    color:#00d4ff;
 }
 
-.btn:hover{
-    background: gold;
+.grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
 }
 
-video{
+/* 🧩 Card Design */
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* 🖼️ Image */
+.card img{
     width:100%;
-    border-radius:12px;
-    margin-top:10px;
+    height:160px;
+    object-fit:cover;
 }
+
+/* Text */
+.card .text{
+    padding:10px;
+}
+
+.title{
+    font-size:18px;
+    font-weight:bold;
+    color:#00d4ff;
+}
+
+.sub{
+    font-size:13px;
+    opacity:0.8;
+}
+
+/* Different crop positions */
+.top img{ object-position: top; }
+.center img{ object-position: center; }
+.bottom img{ object-position: bottom; }
 
 </style>
 </head>
 
 <body>
-
-<div class="container">
-
-<h1>🔥 VIP 30 DAYS GYM PROGRAM</h1>
-
-<!-- PROGRAM -->
-<div class="card">
-<h2>💪 30 Days Plan</h2>
-<p>Complete muscle gain workout program for beginners and advanced users.</p>
-<a class="btn" href="#">Download Plan</a>
-</div>
 
 <!-- VIDEOS -->
 <div class="card">
@@ -106,33 +92,64 @@ video{
 
 </div>
 
-<!-- DIET -->
-<div class="card">
-<h2>🥗 Diet Plan</h2>
-<p>
-- High protein food<br>
-- Eggs, chicken, rice<br>
-- Drink 3L water daily<br>
-- Avoid junk food
-</p>
+<div class="container">
+
+<h2>💎 VIP DIET PLAN</h2>
+
+<div class="grid">
+
+    <!-- 🍗 Chicken -->
+    <div class="card top">
+        <img src="file_00000000a06c71f592b5df59819fb506">
+        <div class="text">
+            <div class="title">🍗 Chicken Breast</div>
+            <div class="sub">High protein for muscle growth</div>
+        </div>
+    </div>
+
+    <!-- 🥚 Eggs -->
+    <div class="card center">
+        <img src="file_00000000a06c71f592b5df59819fb506">
+        <div class="text">
+            <div class="title">🥚 Eggs</div>
+            <div class="sub">Natural protein & energy</div>
+        </div>
+    </div>
+
+    <!-- 🍚 Rice / Diet -->
+    <div class="card bottom">
+        <img src="file_00000000a06c71f592b5df59819fb506">
+        <div class="text">
+            <div class="title">🍚 Energy Food</div>
+            <div class="sub">Power for workout & strength</div>
+        </div>
+    </div>
+
 </div>
 
-<!-- TIPS -->
-<div class="card">
-<h2>⚡ Important Tips</h2>
-<p>
-✔ Train 5 days per week<br>
-✔ Sleep 7–8 hours<br>
-✔ Stay consistent<br>
-✔ Increase weights weekly
-</p>
-    <div class="card">
-<h2>💪 Workout Plan</h2>
-<a href="plan.pdf" download>📥 Download Plan (PDF)</a>
 </div>
-</div>
+<div class="hero">
 
-</div>
+    <div class="overlay"></div>
 
+    <div class="content">
+
+        <h1>💎 VIP FITNESS</h1>
+        <p>Build Muscle • Lose Fat • Stay Strong</p>
+
+        <div class="card">
+            💪 Workout Plan: 5 Days Gym Program <br>
+            🥗 Diet Plan: High Protein Meals <br>
+            ⚡ Tips: Sleep, Consistency, Progress
+        </div>
+
+        <a class="btn" href="#">Download Plan (PDF)</a>
+
+    </div>
 </body>
 </html>
+
+
+
+
+
