@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP SELECT</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#000,#111,#0f0f2a);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Container */
+.box{
+    text-align:center;
+    width:90%;
+}
+
+/* Title */
+h1{
+    color:#00d4ff;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.card{
+    background:rgba(255,255,255,0.06);
+    padding:25px;
+    margin:15px 0;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:rgba(0,212,255,0.15);
+}
+
+/* Icons */
+.icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+/* Text */
+.title{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.sub{
+    font-size:13px;
+    opacity:0.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>💎 VIP SELECT MODE</h1>
+
+<!-- 💪 Fitness -->
+<div class="card" onclick="alert('Fitness Selected')">
+    <div class="icon">🏃‍♂️</div>
+    <div class="title">Fitness</div>
+    <div class="sub">Fat loss • Cardio • Health</div>
+</div>
+
+<!-- 🏋️ Bodybuilding -->
+<div class="card" onclick="alert('Bodybuilding Selected')">
+    <div class="icon">🏋️‍♂️</div>
+    <div class="title">Bodybuilding</div>
+    <div class="sub">Muscle gain • Strength • Mass</div>
+</div>
+
+</div>
+
+</body>
+</html>
